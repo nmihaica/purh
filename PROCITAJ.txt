@@ -1,0 +1,98 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ideja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Servisi za fiskalizaciju PURH-e razvijeni su na SOAP protokolu. Promislio sam kako bi bilo korisno obuhvatiti tu komunikaciju te je zamotati u JS/JSON razmjenu.
+
+  try {
+    await purh.racun(podaci)
+  } catch (err) {
+    console.log('Pogreška', err)
+  }
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+primjer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Ukoliko imate instaliranu node platformu, možete pokrenuti neke od primjera
+
+  node primjeri/0001_racun_zahtjev.js
+  node primjeri/0002_echo_naredba.js
+  node primjeri/0003_provjera_racuna.js
+  node primjeri/0004_pdo.js
+
+* 0003_provjera_racuna.js je moguća samo u razvojnom okruženju
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+api
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  + instalacija
+  yarn add purh --save
+  npm install purh --save
+
+  + inicijalizacija
+  const Purh = require('purh')
+  let purh = new Purh({
+    demo: config.purh.demo
+  })
+
+  + za račun pozvati
+  purh.racun()
+  
+  + za echo metodu pozvati
+  purh.echo()
+  
+  + za pdo pozvati 
+  purh.pdo() 
+  
+  + za provjeru (razvojno okruženje)
+  purh.provjera()
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+postavke
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Primjer demo konfiguracijske datoteke purh.json
+
+  { 
+    "ca_cert": {
+      "path": "./certs/demoCAfile.pem"
+    },
+    "client_certificate": {
+      "path": "./certs/FISKAL_1_DEMO.p12",
+      "password": "2KvFEd"
+    },
+    "purh": {
+      "demo": true,
+      "rejectUnauthorized": true
+    }
+  }
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+priprema certifikata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  pripremljene certifikate potrebno je pospremiti
+  putanja u kojoj se nalaze certifikati
+
+  /certs
+
+  popunjena mapa s pripadajućim certifikatima
+  
+  /certs/DEMO_CA.cer
+  /certs/public.pem
+  /certs/key.pem
+  /certs/FISKAL_DEMO.p12
+
+  ukoliko nemate certifikate u sljedećem formatu
+  možete pročitati datoteku PRETVORBA.txt koja će vas provesti
+  kroz dodatne korake za pripremu
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+problemi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  * za FISKAL_RDC2020 nove certifikate promijeniti postavku
+    rejectUnauthorized: false
+  jer ionako nije potrebno ni provjeravati potpis certifikata
+  na odgovor porezne uprave, iako ista postavka radi s certifikatima
+  izdatim od prije.

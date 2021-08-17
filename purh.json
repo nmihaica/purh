@@ -1,0 +1,13 @@
+{ 
+  "ca_cert": {
+    "path": "./certs/demoCAfile.pem"
+  },
+  "client_certificate": {
+    "path": "./certs/FISKAL_1_DEMO.p12",
+    "password": "2KvFEd"
+  },
+  "purh": {
+    "demo": true,
+    "rejectUnauthorized": true
+  }
+}

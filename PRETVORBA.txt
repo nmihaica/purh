@@ -1,0 +1,21 @@
+Note: It is best if you already have a linux based operating system
+that has already openssl package. In that case you can run the following commands.
+
+Ukoliko ste preuzeli FISKAL_1 (.p12/.pfx) certifikat preko Fine te pripadajuću lozinku
+možete probati sa sljedećim naredbama.
+
+Extract the key-pair
+# openssl pkcs12 -in FISKAL_1.p12 -nocerts -nodes -out sample.key
+
+Get the Private Key from the key-pair
+# openssl rsa -in sample.key -out key.pem
+
+Get the Public Key from key pair
+# openssl rsa -in sample.key -pubout -out public.pem
+
+Move certs to appropriate destination
+
++ FISKAL_1.p12 (main cert)
++ key.pem (private key)
++ public.pem (public key)
++ DEMO_CA or FINA_ROOT_CA (CA)
