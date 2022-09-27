@@ -9,7 +9,6 @@ let signed;
 let withIds;
 
 module.exports = function(){
-  
   return { 
     sign: function(xml){
       let sig = new SignedXml()
@@ -30,13 +29,15 @@ module.exports = function(){
         return p12.key
       }
     }
-
-      sig.keyInfoProvider = new keyInfo()
-      sig.signingKey = p12.key
-
-      sig.computeSignature(xml,{
-        location: { reference: "//*[local-name(.)='Racun']", action: "after" } //This will place the signature after the racun element
+    /* console.log('before', sig.keyInfoProvider) */
+    sig.keyInfoProvider = new keyInfo()
+    sig.signingKey = p12.key
+    /* console.log(sig.keyInfoProvider) */
+      sig.computeSignature(xml, {
+        location: { reference: "//*[local-name(.)='Racun']", action: "after" } 
+        // This will place the signature after the racun element
       })
+    
       signed = sig.getSignatureXml()
       withIds = sig.getOriginalXmlWithIds()
       fs.writeFileSync("signed.xml", sig.getSignedXml())

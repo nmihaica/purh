@@ -1,0 +1,24 @@
+<p>JSON wrapper za komunikaciju sa servisima<br />
+Porezne Uprave Republike Hrvatske</p>
+<pre><code>// inicijaliziraj okruženje  
+const purh = require(&#39;purh&#39;)  
+
+let config = {  
+  ca_cert: {  
+    path: &#39;./certs/demoCAfile.pem&#39;  
+  },  
+  client_certificate: {  
+    path: &quot;./certs/FISKAL_KORISNIK_DEMO.p12&quot;,  
+    password: &quot;1234aA&quot;   
+  },  
+  purh: {  
+    demo: true,  
+    rejectUnauthorized: false  
+  }  
+}  </code></pre>
+<p>const porezna = new purh({ demo: true, response: ‘json’, agentOptions: { rejectUnauthorized: config.purh.rejectUnauthorized, ca: fs.readFileSync(config.ca_cert.path), pfx: fs.readFileSync(config.client_certificate.path), passphrase: config.client_certificate.password, rejectUnauthorized: config.purh.rejectUnauthorized }, ca_cert: config.ca_cert, client_certificate: config.client_certificate })</p>
+<p>// pozovi racun zahtjev servis porezne uprave try { let r = await porezna.rz(racun) console.log(r) } catch (err) { console.log(err) }</p>
+<p>Putokaz ×××××××××××××××××××××××××××××××××××××××× [x] račun zahtjev [x] echo metoda [ ] promjena načina plaćanja [ ] prateći dokument [ ] provjera računa</p>
+<p>[x] log-arhiva [x] xml-potpisivač<br />
+[x] json odgovori ××××××××××××××××××××××××××××××××××××××××</p>
+<p>Dnevnik ×××××××××××××××××××××××××××××××××××××××× 14. rujna 2022. Refactoring stare verzije koja je radila u produkciji</p>

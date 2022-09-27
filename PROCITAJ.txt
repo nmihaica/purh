@@ -17,7 +17,7 @@ primjer
   Ukoliko imate instaliranu node platformu, možete pokrenuti neke od primjera
 
   node primjeri/0001_racun_zahtjev.js
-  node primjeri/0002_echo_naredba.js
+  node primjeri/0002_echo_metoda.js
   node primjeri/0003_provjera_racuna.js
   node primjeri/0004_pdo.js
 

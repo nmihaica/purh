@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="racunId" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd">
+  <tns:Zaglavlje>
+    <tns:IdPoruke>eec97283-5bbc-4ad7-a8a9-da6781b1e733</tns:IdPoruke>
+    <tns:DatumVrijeme>14.09.2022T11:44:00</tns:DatumVrijeme>
+  </tns:Zaglavlje>
+  <tns:Racun>
+    <tns:Oib>11111999998</tns:Oib>
+    <tns:USustPdv>true</tns:USustPdv>
+    <tns:DatVrijeme>14.09.2022T11:44:00</tns:DatVrijeme>
+    <tns:OznSlijed>P</tns:OznSlijed>
+    <tns:BrRac>
+      <tns:BrOznRac>22002</tns:BrOznRac>
+      <tns:OznPosPr>blag001</tns:OznPosPr>
+      <tns:OznNapUr>1</tns:OznNapUr>
+    </tns:BrRac>
+    <tns:Pdv>
+      <tns:Porez>
+        <tns:Stopa>25.00</tns:Stopa>
+        <tns:Osnovica>10.00</tns:Osnovica>
+        <tns:Iznos>2.50</tns:Iznos>
+      </tns:Porez>
+      <tns:Porez>
+        <tns:Stopa>10.00</tns:Stopa>
+        <tns:Osnovica>10.00</tns:Osnovica>
+        <tns:Iznos>1.00</tns:Iznos>
+      </tns:Porez>
+    </tns:Pdv>
+    <tns:Pnp>
+      <tns:Porez>
+        <tns:Stopa>25.00</tns:Stopa>
+        <tns:Osnovica>10.00</tns:Osnovica>
+        <tns:Iznos>2.50</tns:Iznos>
+      </tns:Porez>
+    </tns:Pnp>
+    <tns:IznosUkupno>20.50</tns:IznosUkupno>
+    <tns:NacinPlac>G</tns:NacinPlac>
+    <tns:OibOper>11111999998</tns:OibOper>
+    <tns:ZastKod>6713c2ec84e607addac5b5bd0139b067</tns:ZastKod>
+    <tns:NakDost>false</tns:NakDost>
+    <tns:ParagonBrRac>123/33/22</tns:ParagonBrRac>
+    <tns:SpecNamj>Navedeno kao primjer</tns:SpecNamj>
+  </tns:Racun>
+</tns:RacunZahtjev>

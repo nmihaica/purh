@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:RacunZahtjev xmlns:tns="http://www.apis-it.hr/fin/2012/types/f73" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="racunId" xsi:schemaLocation="http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd">
+  <tns:Zaglavlje>
+    <tns:IdPoruke>3482b570-66ff-4c83-87e6-6d5ccd2bda91</tns:IdPoruke>
+    <tns:DatumVrijeme>27.09.2022T20:02:44</tns:DatumVrijeme>
+  </tns:Zaglavlje>
+  <tns:Racun>
+    <tns:Oib>11111999998</tns:Oib>
+    <tns:USustPdv>true</tns:USustPdv>
+    <tns:DatVrijeme>27.09.2022T20:02:44</tns:DatVrijeme>
+    <tns:OznSlijed>P</tns:OznSlijed>
+    <tns:BrRac>
+      <tns:BrOznRac>1</tns:BrOznRac>
+      <tns:OznPosPr>POS1</tns:OznPosPr>
+      <tns:OznNapUr>1</tns:OznNapUr>
+    </tns:BrRac>
+    <tns:IznosUkupno>-20.50</tns:IznosUkupno>
+    <tns:NacinPlac>G</tns:NacinPlac>
+    <tns:OibOper>11111999998</tns:OibOper>
+    <tns:ZastKod>c2919e01c63269753dbf3ea7ed7d04cd</tns:ZastKod>
+    <tns:NakDost>false</tns:NakDost>
+    <tns:ParagonBrRac>123/33/22</tns:ParagonBrRac>
+    <tns:SpecNamj>Navedeno kao primjer</tns:SpecNamj>
+  </tns:Racun><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#racunId"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>U9lZ1y6YwVWcE8WmwehHokM9vi8=</DigestValue></Reference></SignedInfo><SignatureValue>MEX9xWXFw2tgOkm9omwderBxomIq9dLSzomcFQsnag2x5Rp4U+HbsUBaZJa3G8PVjERO2gQPve1IzSKdYbV0AtzGpYnrCN2CyZUUysW+snn8QL5lDdHoiWNQXA70/pwn8C7r61dgPp4wImIPIyrCY2z2AhYyKFI4Zw2mVwLP6jdGQm3Uy7I2E24/tEmrjj79vin9pbEQsodaqj6di8ZFQ7FY+5xg1hojS25NyGrjGlv+D2YLm/ODiOi+v3FVd+214E0lHFKIK2Psoq3u96z0ICiB8I4qV37JBJyXCxhoW3EZlwSYdoRuSZ3TYG4w8gVbpeesd8/gYVEEhxOH7SRN5A==</SignatureValue><KeyInfo><X509Data><X509Certificate>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</X509Certificate><X509IssuerSerial><X509IssuerName>CN=Fina Demo CA 2020,O=Financijska agencija,C=HR</X509IssuerName><X509SerialNumber>119687566415951143998901916665580361964</X509SerialNumber></X509IssuerSerial></X509Data></KeyInfo></Signature>
+</tns:RacunZahtjev>

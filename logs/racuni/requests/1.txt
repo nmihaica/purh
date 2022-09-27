@@ -1,0 +1,58 @@
+{
+  "tns:RacunZahtjev": {
+    "tns:Zaglavlje": {
+      "tns:IdPoruke": "3482b570-66ff-4c83-87e6-6d5ccd2bda91",
+      "tns:DatumVrijeme": "27.09.2022T20:02:44"
+    },
+    "@xmlns:tns": "http://www.apis-it.hr/fin/2012/types/f73",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@Id": "racunId",
+    "@xsi:schemaLocation": "http://www.apis-it.hr/fin/2012/types/f73 ../schema/FiskalizacijaSchema.xsd",
+    "tns:Racun": {
+      "tns:Oib": {
+        "#text": "11111999998"
+      },
+      "tns:USustPdv": {
+        "#text": true
+      },
+      "tns:DatVrijeme": {
+        "#text": "27.09.2022T20:02:44"
+      },
+      "tns:OznSlijed": {
+        "#text": "P"
+      },
+      "tns:BrRac": {
+        "tns:BrOznRac": {
+          "#text": "1"
+        },
+        "tns:OznPosPr": {
+          "#text": "POS1"
+        },
+        "tns:OznNapUr": {
+          "#text": "1"
+        }
+      },
+      "tns:IznosUkupno": {
+        "#text": "-20.50"
+      },
+      "tns:NacinPlac": {
+        "#text": "G"
+      },
+      "tns:OibOper": {
+        "#text": "11111999998"
+      },
+      "tns:ZastKod": {
+        "#text": "c2919e01c63269753dbf3ea7ed7d04cd"
+      },
+      "tns:NakDost": {
+        "#text": false
+      },
+      "tns:ParagonBrRac": {
+        "#text": "123/33/22"
+      },
+      "tns:SpecNamj": {
+        "#text": "Navedeno kao primjer"
+      }
+    }
+  }
+}
