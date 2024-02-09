@@ -1,0 +1,27 @@
+select "šifra", "proizvod", SUM("kolicina") from (SELECT "order"."id" AS "narudzba",
+       "product"."product_code" AS "šifra",
+       "product"."name" AS "proizvod",
+       "order_product"."quantity" * "product"."price" as "cijena",
+       SUM("order_product"."quantity") as "kolicina"
+      FROM "order"
+      LEFT JOIN "invoice" ON ("order"."id" = "invoice"."order_id")
+      LEFT JOIN "order_product" ON ("order"."id" = "order_product"."order_id")
+      LEFT JOIN "product" ON ("order_product"."product_id" = "product"."id")
+      WHERE "order"."status" = 2
+        AND "order"."space_id" = 24
+        AND "order"."id" IN (SELECT "invoice"."order_id" FROM "invoice" WHERE 
+                 invoice.date >= '2021-07-09 00:00'
+         AND
+         invoice.date <  '2021-07-31 23:59'
+         )
+        group by "narudzba", "šifra", "proizvod", "cijena"
+        ) as "report"
+        group by "šifra", "proizvod"
+        order by "sum" desc
+-- CITY 6 
+-- TRABAKUL 30
+-- CATAMARAN 10
+-- KOLARIN 7
+-- BONACA 37
+
+
